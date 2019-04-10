@@ -25,7 +25,7 @@ int main(void)
 		PC = 0;
 		tt = PINA & 0x30;
 		if(PA<=2){
-			PC =96;
+			PC =64;
 		}
 		else if( PA >2 & PA <= 4){
 			PC = 112;
@@ -43,7 +43,7 @@ int main(void)
 			PC = 63;
 		}
 		if(tt){
-			if (tt <= 3){
+			if (tt == 0x30){
 				PC = PC + 128; 
 			}
 		}
