@@ -1,7 +1,7 @@
 /*
- * vsubr004_lab3_part2.c
+ * vsubr004_lab3_part3.c
  *
- * Created: 4/9/2019 7:27:16 PM
+ * Created: 4/9/2019 8:17:23 PM
  * Author : ucrcse
  */ 
 
@@ -10,7 +10,7 @@
 
 int main(void)
 {
-    /* Replace with your application code */
+	/* Replace with your application code */
 	DDRA = 0x00;
 	DDRC = 0xFF;
 	PORTA = 0xFF;
@@ -18,10 +18,12 @@ int main(void)
 	
 	unsigned char PA;
 	unsigned char PC;
-    while (1) 
-    {
-		PA = PINA;
+	unsigned char tt;
+	while (1)
+	{
+		PA = PINA & 0x0F;
 		PC = 0;
+		tt = PINA & 0x30;
 		if(PA<=2){
 			PC =96;
 		}
@@ -40,7 +42,13 @@ int main(void)
 		else if (PA > 12 & PA <= 15){
 			PC = 63;
 		}
-     PORTC = PC;
+		if(tt){
+			//if (PA > 15 & PA <= 63){
+				PC = PC + 128; 
+			//}
+		}
+		PORTC = PC;
 	}
 }
+
 
