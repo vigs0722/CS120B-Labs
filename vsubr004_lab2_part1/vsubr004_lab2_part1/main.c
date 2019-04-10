@@ -34,6 +34,6 @@ int main(void)
 		if ((tmpA & 0x08) == 0x00) {
 			++cntavail;
 		}
-		PORTC = cntavail;
+		PORTC = cntavail;//dummy
 	}
 }
