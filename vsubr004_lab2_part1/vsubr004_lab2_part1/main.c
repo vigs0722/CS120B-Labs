@@ -35,5 +35,6 @@ int main(void)
 			++cntavail;
 		}
 		PORTC = cntavail;//dummy
+		//adding lines
 	}
 }
