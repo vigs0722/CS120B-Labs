@@ -43,9 +43,9 @@ int main(void)
 			PC = 63;
 		}
 		if(tt){
-			//if (PA > 15 & PA <= 63){
+			if (tt <= 3){
 				PC = PC + 128; 
-			//}
+			}
 		}
 		PORTC = PC;
 	}
